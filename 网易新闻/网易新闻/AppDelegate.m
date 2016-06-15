@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self setupAppearance];
+    
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
     
@@ -27,6 +29,12 @@
     [_window makeKeyAndVisible];
     
     return YES;
+}
+
+// 设置控件全局外观
+- (void)setupAppearance {
+    
+    [UITabBar appearance].tintColor = [UIColor cz_colorWithHex:0xDF0000];
 }
     
 @end

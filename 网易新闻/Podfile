@@ -9,5 +9,8 @@ target '网易新闻' do
 
 pod 'YYModel'
 pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'Masonry'
+pod 'FMDB'
 
 end

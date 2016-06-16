@@ -26,6 +26,8 @@
 		DC3BEE131D11269200BBF9D6 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BEE071D11269200BBF9D6 /* UIViewController+CZAddition.m */; };
 		DC3BEE191D1128D800BBF9D6 /* WYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BEE181D1128D800BBF9D6 /* WYMainViewController.m */; };
 		DC3BEE1C1D113A3C00BBF9D6 /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BEE1B1D113A3C00BBF9D6 /* WYHomeViewController.m */; };
+		DC3BEE241D11723E00BBF9D6 /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BEE231D11723E00BBF9D6 /* WYNewsListController.m */; };
+		DC3BEE281D11C44200BBF9D6 /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BEE271D11C44200BBF9D6 /* WYNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,10 @@
 		DC3BEE1A1D113A3C00BBF9D6 /* WYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHomeViewController.h; sourceTree = "<group>"; };
 		DC3BEE1B1D113A3C00BBF9D6 /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
 		DC3BEE1D1D11448400BBF9D6 /* WYPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPrefix.pch; sourceTree = "<group>"; };
+		DC3BEE221D11723E00BBF9D6 /* WYNewsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYNewsListController.h; path = NewsList/WYNewsListController.h; sourceTree = "<group>"; };
+		DC3BEE231D11723E00BBF9D6 /* WYNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYNewsListController.m; path = NewsList/WYNewsListController.m; sourceTree = "<group>"; };
+		DC3BEE261D11C44200BBF9D6 /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
+		DC3BEE271D11C44200BBF9D6 /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
 		E4A8E4803C7A3692119A0F07 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				DC3BEDEE1D11269200BBF9D6 /* Additions */,
+				DC3BEE251D11C3F400BBF9D6 /* Network */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -194,6 +201,10 @@
 		DC3BEE151D1126CF00BBF9D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DC3BEE1F1D11720A00BBF9D6 /* NewsList */,
+				DC3BEE221D11723E00BBF9D6 /* WYNewsListController.h */,
+				DC3BEE231D11723E00BBF9D6 /* WYNewsListController.m */,
+				DC3BEE1E1D11720100BBF9D6 /* NewsDetail */,
 				DC3BEE1A1D113A3C00BBF9D6 /* WYHomeViewController.h */,
 				DC3BEE1B1D113A3C00BBF9D6 /* WYHomeViewController.m */,
 			);
@@ -207,6 +218,45 @@
 				DC3BEE181D1128D800BBF9D6 /* WYMainViewController.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DC3BEE1E1D11720100BBF9D6 /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		DC3BEE1F1D11720A00BBF9D6 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				DC3BEE201D11720A00BBF9D6 /* Model */,
+				DC3BEE211D11720A00BBF9D6 /* Views */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		DC3BEE201D11720A00BBF9D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC3BEE211D11720A00BBF9D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC3BEE251D11C3F400BBF9D6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC3BEE261D11C44200BBF9D6 /* WYNetworkManager.h */,
+				DC3BEE271D11C44200BBF9D6 /* WYNetworkManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC3BEE0F1D11269200BBF9D6 /* UIColor+CZAddition.m in Sources */,
+				DC3BEE241D11723E00BBF9D6 /* WYNewsListController.m in Sources */,
 				DC3BEE091D11269200BBF9D6 /* NSAttributedString+CZAdditon.m in Sources */,
 				DC3BEE0D1D11269200BBF9D6 /* NSString+CZPath.m in Sources */,
 				DC3BEE081D11269200BBF9D6 /* NSArray+Log.m in Sources */,
@@ -343,6 +394,7 @@
 				DC3BEE191D1128D800BBF9D6 /* WYMainViewController.m in Sources */,
 				DC3BEE0B1D11269200BBF9D6 /* NSString+CZBase64.m in Sources */,
 				DC3BEE0A1D11269200BBF9D6 /* NSObject+CZRuntime.m in Sources */,
+				DC3BEE281D11C44200BBF9D6 /* WYNetworkManager.m in Sources */,
 				DC3BEE131D11269200BBF9D6 /* UIViewController+CZAddition.m in Sources */,
 				DC3BEE111D11269200BBF9D6 /* UIScreen+CZAddition.m in Sources */,
 				DC3BEDB51D10F6F600BBF9D6 /* main.m in Sources */,
